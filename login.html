@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Prijava u korisnički račun IT Fashion prodavnice."
+    />
+    <meta name="theme-color" content="#f7f3ef" />
+    <title>Prijava | IT Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="site-nav">
+        <a class="brand-link" href="index.html"><img class="brand-logo" src="images/logo.png" alt="IT Fashion" /></a>
+        <nav class="nav-links">
+          <a href="index.html">Početna</a>
+          <a href="products.html">Prodavnica</a>
+          <a href="about.html">O nama</a>
+          <a href="contact.html">Kontakt</a>
+          <a class="sale-link" href="products.html">Akcija!</a>
+        </nav>
+        <div class="header-icons">
+          <a href="checkout.html" onclick="openCart(); return false;"><img src="images/cart_logo.png" alt="Korpa" /></a>
+          <a href="login.html"><img src="images/user_logo.png" alt="Prijava" /></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="login-main">
+      <div class="container-xl py-4 py-md-5">
+        <nav>
+          <ol class="breadcrumb small mb-4">
+            <li class="breadcrumb-item"><a href="products.html">Početna</a></li>
+            <li class="breadcrumb-item active">Prijava</li>
+          </ol>
+        </nav>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <header class="text-center mb-4">
+              <p class="eyebrow mb-2">Dobro došli nazad</p>
+              <h1 class="display-6 fw-semibold mb-2">Prijava</h1>
+              <p class="text-secondary mb-0">
+                Pristupite svojim narudžbama i sačuvanim artiklima.
+              </p>
+            </header>
+
+            <form
+              class="card login-card"
+              id="login-form"
+              onsubmit="event.preventDefault(); console.log(login());"
+            >
+              <div class="card-body p-4 p-sm-5">
+                <div class="mb-3">
+                  <label class="form-label" for="email">E-mail adresa</label>
+                  <input
+                    class="form-control form-control-lg"
+                    id="email"
+                    name="email"
+                      type="text"
+                    inputmode="email"
+                    autocomplete="email"
+                    placeholder="ime@primjer.ba"
+                    required
+                   
+                  />
+                  <div class="invalid-feedback" id="email-feedback">
+                    Unesite ispravnu e-mail adresu.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div
+                    class="d-flex justify-content-between align-items-baseline gap-3"
+                  >
+                    <label class="form-label" for="password">Lozinka</label>
+                    <a class="text-link small" href="contact.html#pomoc"
+                      >Zaboravili ste lozinku?</a
+                    >
+                  </div>
+                  <div class="input-group has-validation">
+                    <input
+                      class="form-control form-control-lg"
+                      id="password"
+                      name="password"
+                      type="password"
+                      autocomplete="current-password"
+                      placeholder="Najmanje 8 znakova"
+                      required
+                     
+                    />
+                    <div class="invalid-feedback" id="password-feedback">
+                      Lozinka mora imati najmanje 8 znakova.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-check mb-4">
+                  <input
+                    class="form-check-input"
+                    id="remember"
+                    name="remember"
+                    type="checkbox"
+                  />
+                  <label class="form-check-label" for="remember"
+                    >Zapamti me na ovom uređaju</label
+                  >
+                </div>
+                <button class="btn btn-dark btn-lg w-100" type="submit">
+                  Prijavi se
+                </button>
+
+                <div class="divider my-4">
+                  <span>ili</span>
+                </div>
+                <p class="text-center mb-0">
+                  Nemate nalog?
+                  <a class="text-link fw-semibold" href="contact.html#pomoc"
+                    >Kreirajte nalog</a
+                  >
+                </p>
+              </div>
+            </form>
+
+            <p class="secure-note text-center small text-secondary mt-3 mb-0">
+              
+              Vaši podaci su zaštićeni sigurnom vezom.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <section>
+            <h2>Prodavnica</h2>
+            <ul><li><a href="products.html">Haljine</a></li><li><a href="products.html">Jakne</a></li><li><a href="products.html">Majice</a></li><li><a href="products.html">Obuća i torbe</a></li></ul>
+          </section>
+          <section>
+            <h2>Informacije</h2>
+            <ul><li><a href="about.html">O nama</a></li><li><a href="about.html#uslovi">Uslovi korištenja</a></li><li><a href="about.html#privatnost">Politika privatnosti</a></li><li><a href="about.html#dostava">Dostava i povrat</a></li></ul>
+          </section>
+          <section>
+            <h2>Korisnička podrška</h2>
+            <ul><li><a href="contact.html">Kontakt</a></li><li><a href="contact.html#pomoc">Pomoć</a></li><li><a href="contact.html#pitanja">Česta pitanja</a></li></ul>
+          </section>
+        </div>
+        <div class="footer-bottom">
+          <span>Dizajnirao i izradio: <strong>Ajdin Vrtagić</strong></span>
+          <div class="social-links">
+            <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram" /></a>
+            <a href="https://www.tiktok.com"><img src="images/tiktok.png" alt="TikTok" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+

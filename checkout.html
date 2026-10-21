@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Sigurna i responzivna stranica za naplatu IT Fashion prodavnice."
+    />
+    <title>Naplata | IT Fashion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-body-tertiary text-dark">
+    <header class="site-header">
+      <div class="site-nav">
+        <a class="brand-link" href="index.html"><img class="brand-logo" src="images/logo.png" alt="IT Fashion" /></a>
+        <nav class="nav-links">
+          <a href="index.html">Početna</a>
+          <a href="products.html">Prodavnica</a>
+          <a href="about.html">O nama</a>
+          <a href="contact.html">Kontakt</a>
+          <a class="sale-link" href="products.html">Akcija!</a>
+        </nav>
+        <div class="header-icons">
+          <a href="checkout.html" onclick="openCart(); return false;"><img src="images/cart_logo.png" alt="Korpa" /></a>
+          <a href="login.html"><img src="images/user_logo.png" alt="Prijava" /></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container py-4 py-lg-5">
+      <nav>
+        <ol class="breadcrumb small mb-3">
+          <li class="breadcrumb-item"><a href="products.html">Početna</a></li>
+          <li class="breadcrumb-item"><a href="checkout.html">Korpa</a></li>
+          <li class="breadcrumb-item active">Naplata</li>
+        </ol>
+      </nav>
+      <div class="text-center mb-4 mb-lg-5">
+        <h1 class="display-6 fw-bold mb-2">Naplata</h1>
+        <p class="text-secondary mb-0">
+          Pregledajte narudžbu i unesite podatke za dostavu.
+        </p>
+      </div>
+
+      <div class="row g-4 g-lg-5">
+        <aside
+          class="col-12 col-lg-6 order-lg-2"
+         
+        >
+          <div class="card shadow-sm border-0 h-100">
+            <div class="card-body p-3 p-sm-4">
+              <h2 class="h4 fw-bold mb-4" id="summary-title">Pregled korpe</h2>
+              <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item px-0 py-3">
+                  <div class="d-flex gap-3">
+                    <img class="product-image rounded" src="images/photo-1591369822096-ffd140ec948f.jpg" alt="Ženski bež blejzer" />
+                    <div class="flex-grow-1"><h3 class="h6 mb-1">Ženski bež blejzer</h3><p class="small text-secondary mb-2">Veličina: S</p><span class="badge text-bg-light border">Količina: 1</span></div>
+                    <strong class="text-nowrap">95 KM</strong>
+                  </div>
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <div class="d-flex gap-3">
+                    <img class="product-image rounded" src="images/photo-1617137968427-85924c800a22.jpg" alt="Muška bijela košulja" />
+                    <div class="flex-grow-1"><h3 class="h6 mb-1">Muška bijela košulja</h3><p class="small text-secondary mb-2">Veličina: M</p><span class="badge text-bg-light border">Količina: 1</span></div>
+                    <strong class="text-nowrap">55 KM</strong>
+                  </div>
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <div class="d-flex gap-3">
+                    <img class="product-image rounded" src="images/product-blouse.jpg" alt="Ženska bluza bez rukava" />
+                    <div class="flex-grow-1"><h3 class="h6 mb-1">Ženska bluza bez rukava</h3><p class="small text-secondary mb-2">Veličina: S</p><span class="badge text-bg-light border">Količina: 1</span></div>
+                    <strong class="text-nowrap">32 KM</strong>
+                  </div>
+                </li>
+                <li class="list-group-item px-0 py-3">
+                  <div class="d-flex gap-3">
+                    <img class="product-image rounded" src="images/photo-1542272604-787c3835535d.jpg" alt="Muške plave farmerke" />
+                    <div class="flex-grow-1"><h3 class="h6 mb-1">Muške plave farmerke</h3><p class="small text-secondary mb-2">Veličina: L</p><span class="badge text-bg-light border">Količina: 1</span></div>
+                    <strong class="text-nowrap">70 KM</strong>
+                  </div>
+                </li>
+              </ul>
+              <div
+                class="d-flex justify-content-between border-top pt-3 fs-5 fw-bold"
+              >
+                <span>Ukupno</span><span>252 KM</span>
+              </div>
+              <form class="d-flex gap-2 mt-3" onsubmit="return false;">
+                <input
+                  class="form-control"
+                  id="promo-input"
+                  type="text"
+                  placeholder="Add promo code"
+                />
+                <button
+                  class="btn btn-dark"
+                  type="button"
+                  onclick="validateAndNotify()"
+                >
+                  Apply
+                </button>
+              </form>
+            </div>
+          </div>
+        </aside>
+
+        <section
+          class="col-12 col-lg-6 order-lg-1"
+         
+        >
+          <form class="" id="checkout-form">
+            <div class="card shadow-sm border-0 mb-4">
+              <div class="card-body p-3 p-sm-4">
+                <h2 class="h4 fw-bold mb-4" id="shipping-title">
+                  Podaci za dostavu
+                </h2>
+                <div class="row g-3">
+                  <div class="col-12 col-sm-6">
+                    <label class="form-label" for="first-name">Ime</label
+                    ><input
+                      class="form-control"
+                      id="first-name"
+                      name="first-name"
+                      type="text"
+                      autocomplete="given-name"
+                      required
+                    />
+                    <div class="invalid-feedback">Unesite ime.</div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <label class="form-label" for="last-name">Prezime</label
+                    ><input
+                      class="form-control"
+                      id="last-name"
+                      name="last-name"
+                      type="text"
+                      autocomplete="family-name"
+                      required
+                    />
+                    <div class="invalid-feedback">Unesite prezime.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="address">Adresa</label
+                    ><input
+                      class="form-control"
+                      id="address"
+                      name="address"
+                      type="text"
+                      autocomplete="street-address"
+                      required
+                    />
+                    <div class="invalid-feedback">Unesite adresu.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="apartment"
+                      >Stan, sprat i drugo
+                      <span class="text-secondary">(opcionalno)</span></label
+                    ><input
+                      class="form-control"
+                      id="apartment"
+                      name="apartment"
+                      type="text"
+                      autocomplete="address-line2"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <label class="form-label" for="country">Država</label
+                    ><select
+                      class="form-select"
+                      id="country"
+                      name="country"
+                      autocomplete="country-name"
+                      required
+                    >
+                      <option value="">Odaberite</option>
+                      <option>Bosna i Hercegovina</option>
+                      <option>Hrvatska</option>
+                      <option>Srbija</option>
+                    </select>
+                    <div class="invalid-feedback">Odaberite državu.</div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <label class="form-label" for="city">Grad</label
+                    ><input
+                      class="form-control"
+                      id="city"
+                      name="city"
+                      type="text"
+                      autocomplete="address-level2"
+                      required
+                    />
+                    <div class="invalid-feedback">Unesite grad.</div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <label class="form-label" for="zip-code"
+                      >Poštanski broj</label
+                    ><input
+                      class="form-control"
+                      id="zip-code"
+                      name="zip-code"
+                      type="text"
+                      inputmode="numeric"
+                      autocomplete="postal-code"
+                      pattern="[0-9]{5}"
+                      required
+                     
+                    />
+                    <div id="zip-help" class="form-text">
+                      Pet cifara, npr. 71000.
+                    </div>
+                    <div class="invalid-feedback">
+                      Unesite poštanski broj od pet cifara.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        id="save-contact"
+                        name="save-contact"
+                        type="checkbox"
+                      /><label class="form-check-label" for="save-contact"
+                        >Sačuvaj kontakt informacije</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-3 p-sm-4">
+                <h2 class="h4 fw-bold mb-4">Podaci za plaćanje</h2>
+                <fieldset class="mb-4">
+                  <legend class="visually-hidden">
+                    Odaberite način plaćanja
+                  </legend>
+                  <div
+                    class="btn-group w-100"
+                   
+                   
+                  >
+                    <input
+                      class="btn-check"
+                      type="radio"
+                      name="payment-method"
+                      id="paypal"
+                      checked
+                    /><label class="btn btn-outline-primary" for="paypal"
+                      ><img
+                        class="paypal-logo"
+                        src="images/paypal.png"
+                        alt="PayPal" /></label
+                    ><input
+                      class="btn-check"
+                      type="radio"
+                      name="payment-method"
+                      id="cash"
+                    /><label class="btn btn-outline-dark" for="cash"
+                      >Gotovina</label
+                    >
+                  </div>
+                </fieldset>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label" for="card-holder"
+                      >Ime vlasnika kartice</label
+                    ><input
+                      class="form-control"
+                      id="card-holder"
+                      name="card-holder"
+                      type="text"
+                      autocomplete="cc-name"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Unesite ime vlasnika kartice.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="card-number"
+                      >Broj kartice</label
+                    ><input
+                      class="form-control"
+                      id="card-number"
+                      name="card-number"
+                      type="text"
+                      inputmode="numeric"
+                      autocomplete="cc-number"
+                      pattern="[0-9 ]{15,19}"
+                      placeholder="1234 5678 9012 3456"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Unesite važeći broj kartice.
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <label class="form-label" for="expiry-month">Mjesec</label
+                    ><select
+                      class="form-select"
+                      id="expiry-month"
+                      name="expiry-month"
+                      autocomplete="cc-exp-month"
+                      required
+                    >
+                      <option value="">MM</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <div class="invalid-feedback">Odaberite mjesec.</div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <label class="form-label" for="expiry-year">Godina</label
+                    ><select
+                      class="form-select"
+                      id="expiry-year"
+                      name="expiry-year"
+                      autocomplete="cc-exp-year"
+                      required
+                    >
+                      <option value="">GGGG</option>
+                      <option>2026</option>
+                      <option>2027</option>
+                      <option>2028</option>
+                      <option>2029</option>
+                      <option>2030</option>
+                    </select>
+                    <div class="invalid-feedback">Odaberite godinu.</div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <label class="form-label" for="cvc">CVC</label
+                    ><input
+                      class="form-control"
+                      id="cvc"
+                      name="cvc"
+                      type="text"
+                      inputmode="numeric"
+                      autocomplete="cc-csc"
+                      pattern="[0-9]{3,4}"
+                      maxlength="4"
+                      required
+                    />
+                    <div class="invalid-feedback">Unesite CVC kod.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        id="save-card"
+                        name="save-card"
+                        type="checkbox"
+                      /><label class="form-check-label" for="save-card"
+                        >Sačuvaj podatke kartice</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="form-status"
+                  class="visually-hidden"
+                 
+                 
+                ></div>
+                <button class="btn btn-dark w-100 mt-4 py-2" type="submit">
+                  Plati 252 KM
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <section>
+            <h2>Prodavnica</h2>
+            <ul><li><a href="products.html">Haljine</a></li><li><a href="products.html">Jakne</a></li><li><a href="products.html">Majice</a></li><li><a href="products.html">Obuća i torbe</a></li></ul>
+          </section>
+          <section>
+            <h2>Informacije</h2>
+            <ul><li><a href="about.html">O nama</a></li><li><a href="about.html#uslovi">Uslovi korištenja</a></li><li><a href="about.html#privatnost">Politika privatnosti</a></li><li><a href="about.html#dostava">Dostava i povrat</a></li></ul>
+          </section>
+          <section>
+            <h2>Korisnička podrška</h2>
+            <ul><li><a href="contact.html">Kontakt</a></li><li><a href="contact.html#pomoc">Pomoć</a></li><li><a href="contact.html#pitanja">Česta pitanja</a></li></ul>
+          </section>
+        </div>
+        <div class="footer-bottom">
+          <span>Dizajnirao i izradio: <strong>Ajdin Vrtagić</strong></span>
+          <div class="social-links">
+            <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram" /></a>
+            <a href="https://www.tiktok.com"><img src="images/tiktok.png" alt="TikTok" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+

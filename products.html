@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Svi proizvodi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="products-page">
+    <header class="site-header">
+      <div class="site-nav">
+        <a class="brand-link" href="index.html"><img class="brand-logo" src="images/logo.png" alt="IT Fashion" /></a>
+        <nav class="nav-links">
+          <a href="index.html">Početna</a>
+          <a href="products.html">Prodavnica</a>
+          <a href="about.html">O nama</a>
+          <a href="contact.html">Kontakt</a>
+          <a class="sale-link" href="products.html">Akcija!</a>
+        </nav>
+        <div class="header-icons">
+          <a href="checkout.html" onclick="openCart(); return false;"><img src="images/cart_logo.png" alt="Korpa" /></a>
+          <a href="login.html"><img src="images/user_logo.png" alt="Prijava" /></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <nav class="breadcrumbs">
+        <a href="index.html">Početna</a> &gt; Svi proizvodi
+      </nav>
+      <h1 class="page-title">Svi proizvodi</h1>
+      <div class="products-layout">
+        <aside class="filter-panel">
+          <h2>Filteri</h2>
+          <div class="filter-group">
+            <h3>Brend</h3>
+            <label><input type="checkbox" value="zara" /> Zara</label>
+            <label><input type="checkbox" value="hm" /> H&amp;M</label>
+            <label><input type="checkbox" value="bershka" /> Bershka</label>
+            <label><input type="checkbox" value="mango" /> Mango</label>
+          </div>
+          <div class="filter-group">
+            <h3>Kategorije</h3>
+            <label><input type="checkbox" value="jakne" /> Jakne</label>
+            <label><input type="checkbox" value="majice" /> Majice</label>
+            <label><input type="checkbox" value="pantalone" /> Pantalone</label>
+          </div>
+          <button
+           
+            class="primary-button full-button"
+            type="button"
+          >
+            Primijeni filtere
+          </button>
+        </aside>
+        <section>
+          <div class="products-toolbar">
+            <span>Prikazano 12 od 12 proizvoda</span>
+            <span>Sortiranje: Najpopularnije</span>
+          </div>
+          <div class="product-grid">
+            <article class="card">
+              <img
+                src="images/photo-1591369822096-ffd140ec948f.jpg"
+                alt="Ženski bež blejzer"
+              />
+              <h3>Ženski bež blejzer</h3>
+              <p class="price">95 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(95)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/photo-1617137968427-85924c800a22.jpg"
+                alt="Muška bijela košulja"
+              />
+              <h3>Muška bijela košulja</h3>
+              <p class="price">55 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(55)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/product-blouse.jpg"
+                alt="Ženska bluza bez rukava"
+              />
+              <h3>Ženska bluza bez rukava</h3>
+              <p class="price">32 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(32)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/photo-1542272604-787c3835535d.jpg"
+                alt="Muške plave farmerke"
+              />
+              <h3>Muške plave farmerke</h3>
+              <p class="price">70 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(70)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <span class="badge">AKCIJA</span>
+              <img
+                src="images/photo-1541099649105-f69ad21f3246.jpg"
+                alt="Retro farmerke"
+              />
+              <h3>Retro farmerke</h3>
+              <p class="price">70 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(70)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/photo-1539533018447-63fcce2678e3.jpg"
+                alt="Kaput boje karamele"
+              />
+              <h3>Kaput boje karamele</h3>
+              <p class="price">95 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(95)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/photo-1434389677669-e08b4cac3105.jpg"
+                alt="Pletena majica"
+              />
+              <h3>Pletena majica</h3>
+              <p class="price">55 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(55)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/photo-1603252109303-2751441dd157.jpg"
+                alt="Traper košulja"
+              />
+              <h3>Traper košulja</h3>
+              <p class="price">34 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(34)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/photo-1506629082955-511b1aa562c8.jpg"
+                alt="Elegantne pantalone"
+              />
+              <h3>Elegantne pantalone</h3>
+              <p class="price">28 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(28)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img
+                src="images/photo-1598554747436-c9293d6a588f.jpg"
+                alt="Široke pantalone"
+              />
+              <h3>Široke pantalone</h3>
+              <p class="price">30 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(30)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <img src="images/product-blouse.jpg" alt="Bluza bez rukava" />
+              <h3>Bluza bez rukava</h3>
+              <p class="price">32 KM</p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(32)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+
+            <article class="card">
+              <span class="badge">AKCIJA</span>
+              <img
+                src="images/photo-1529139574466-a303027c1d8b.jpg"
+                alt="Plišani prsluk"
+              />
+              <h3>Plišani prsluk</h3>
+              <p class="price">60 KM<span class="old-price">65 KM</span></p>
+              <button
+                class="secondary-button full-button"
+                type="button"
+                onclick="dodajNaIznos(60)"
+              >
+                Dodaj u korpu
+              </button>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <section class="newsletter">
+      <div class="newsletter-inner">
+        <h2>OSTANITE U TOKU SA NAŠIM NAJBOLJIM PONUDAMA!</h2>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="Unesite svoju e-mail adresu"
+           
+            required
+          />
+          <button class="primary-button" type="submit">Pretplati se</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="footer">
+      <div class="footer-content">
+        <div class="footer-columns">
+          <section>
+            <h2>Prodavnica</h2>
+            <ul><li><a href="products.html">Haljine</a></li><li><a href="products.html">Jakne</a></li><li><a href="products.html">Majice</a></li><li><a href="products.html">Obuća i torbe</a></li></ul>
+          </section>
+          <section>
+            <h2>Informacije</h2>
+            <ul><li><a href="about.html">O nama</a></li><li><a href="about.html#uslovi">Uslovi korištenja</a></li><li><a href="about.html#privatnost">Politika privatnosti</a></li><li><a href="about.html#dostava">Dostava i povrat</a></li></ul>
+          </section>
+          <section>
+            <h2>Korisnička podrška</h2>
+            <ul><li><a href="contact.html">Kontakt</a></li><li><a href="contact.html#pomoc">Pomoć</a></li><li><a href="contact.html#pitanja">Česta pitanja</a></li></ul>
+          </section>
+        </div>
+        <div class="footer-bottom">
+          <span>Dizajnirao i izradio: <strong>Ajdin Vrtagić</strong></span>
+          <div class="social-links">
+            <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram" /></a>
+            <a href="https://www.tiktok.com"><img src="images/tiktok.png" alt="TikTok" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
